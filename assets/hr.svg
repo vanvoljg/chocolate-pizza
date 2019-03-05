@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="8" height="8">
+<style>
+line {
+  fill: #999;
+  stroke: #999;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 1;
+}
+</style>
+<defs>
+<pattern id="diagonaldown" class="hatch" patternUnits="userSpaceOnUse" width="8" height="8" >
+  <line x1="-8" y1="0" x2="0" y2="8" />
+  <line x1="-4" y1="0" x2="4" y2="8" />
+  <line x1="0" y1="0" x2="8" y2="8" />
+  <line x1="4" y1="0" x2="12" y2="8" />
+  <line x1="8" y1="0" x2="16" y2="8" />
+</pattern>
+</defs>
+<rect id="rule" x="0" y="0" width="8" height="8" style="fill: url(#diagonaldown)" />
+</svg>
