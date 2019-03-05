@@ -2,13 +2,48 @@ body > * {
   box-sizing: border-box;
 }
 
+.grid-container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  overflow: auto;
+}
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+  padding: 15px;
+}
+
+.col-1 {
+  width: 16.66%;
+}
+.col-2 {
+  width: 33.33%;
+}
+.col-3 {
+  width: 50%;
+}
+.col-4 {
+  width: 66.66%;
+}
+.col-5 {
+  width: 83.33%;
+}
+.col-6 {
+  width: 100%;
+}
+
 /*
 The background image of the hatched horizontal line is base64 encoded SVG to keep
 it all in the css. The running SVG is in assets/hr.svg.
 */
 
 .hr {
-  width: 100%;
+  width: 960px;
   height: 14px;
   background-color: transparent;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjgiIGhlaWdodD0iOCI+CjxzdHlsZT4KbGluZSB7CiAgZmlsbDogIzk5OTsKICBzdHJva2U6ICM5OTk7CiAgc3Ryb2tlLWxpbmVjYXA6IHNxdWFyZTsKICBzdHJva2UtbGluZWpvaW46IG1pdGVyOwogIHN0cm9rZS13aWR0aDogMTsKfQo8L3N0eWxlPgo8ZGVmcz4KPHBhdHRlcm4gaWQ9ImRpYWdvbmFsZG93biIgY2xhc3M9ImhhdGNoIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiA+CiAgPGxpbmUgeDE9Ii04IiB5MT0iMCIgeDI9IjAiIHkyPSI4IiAvPgogIDxsaW5lIHgxPSItNCIgeTE9IjAiIHgyPSI0IiB5Mj0iOCIgLz4KICA8bGluZSB4MT0iMCIgeTE9IjAiIHgyPSI4IiB5Mj0iOCIgLz4KICA8bGluZSB4MT0iNCIgeTE9IjAiIHgyPSIxMiIgeTI9IjgiIC8+CiAgPGxpbmUgeDE9IjgiIHkxPSIwIiB4Mj0iMTYiIHkyPSI4IiAvPgo8L3BhdHRlcm4+CjwvZGVmcz4KPHJlY3QgaWQ9InJ1bGUiIHg9IjAiIHk9IjAiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHN0eWxlPSJmaWxsOiB1cmwoI2RpYWdvbmFsZG93bikiIC8+Cjwvc3ZnPgo=");
