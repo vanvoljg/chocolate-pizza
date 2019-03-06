@@ -52,6 +52,7 @@ body {
 
 header .row {
   padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 header > div > div:first-child * {
@@ -62,7 +63,7 @@ header > div > div:first-child * {
 header > div > div:first-child img {
   float: left;
   margin-top: 20px;
-  height: 50px;
+  height: 49px;
 
 }
 header > div > div:first-child h1 {
@@ -75,23 +76,27 @@ header > div > div:first-child h1 {
 
 header > div > div:first-child .subtitle {
   font-family: 'oswald', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
+  margin: 0 0 0 55px;
 }
 
 .social {
   float: right;
+  margin-top: 31px;
 }
 
 .social img {
   display: block;
   float: left;
-  margin: 1px;
+  margin-left: 2px;
   padding: 0;
+  width: 26px;
 }
 
 .social img:nth-last-child(2) {
   margin-left: 10px;
 }
+
 
 .hero {
   width: 100%;
@@ -102,7 +107,7 @@ The background image of the hatched horizontal line is base64 encoded SVG to kee
 it all in the css. The running SVG is in assets/hr.svg.
 */
 
-.hr {
+.hatched-hr {
   width: 960px;
   height: 14px;
   background-color: transparent;
@@ -110,6 +115,5 @@ it all in the css. The running SVG is in assets/hr.svg.
   background-repeat: repeat;
   border: none;
   margin: 0 auto;
-
 }
 
