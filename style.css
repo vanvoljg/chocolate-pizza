@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Oswald:300|Patrick+Hand|Yellowtail');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Oswald:300|Oswald:500|Patrick+Hand|Yellowtail');
 
 html {
   box-sizing: border-box;
@@ -13,6 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  color: #232323;
 }
 
 .grid-container {
@@ -52,7 +53,7 @@ body {
 
 header .row {
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
 }
 
 header > div > div:first-child * {
@@ -76,8 +77,10 @@ header > div > div:first-child h1 {
 
 header > div > div:first-child .subtitle {
   font-family: 'oswald', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0 0 0 55px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
 }
 
 .social {
@@ -100,6 +103,18 @@ header > div > div:first-child .subtitle {
 
 .hero {
   width: 100%;
+}
+
+.right .light {
+  float: right;
+}
+
+.recipe-title {
+  font-family: 'oswald', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  margin-block-end: 0;
 }
 
 /*
