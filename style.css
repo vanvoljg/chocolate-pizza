@@ -73,6 +73,7 @@ header > div > div:first-child h1 {
   font-size: 43px;
   line-height: 1;
   font-weight: normal;
+  color: #222222;
 }
 
 header > div > div:first-child .subtitle {
@@ -123,7 +124,7 @@ main > div:nth-of-type(2) {
   letter-spacing: -1.0px;
   margin-block-start: 40px;
   margin-block-end: 0;
-  color: #2c2111;
+  color: #222321;
 }
 
 .light {
@@ -137,7 +138,7 @@ main > div:nth-of-type(2) {
 }
 
 .recipe-text > * {
-  color: #3f3019;
+  color: #6d624d;
   font-family: 'noto serif', Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
   line-height: 1.5;
@@ -160,18 +161,32 @@ main > div:nth-of-type(2) {
   font-size: 25px;
   letter-spacing: .30px;
   height: 365px;
-  color: #3f3019;
+  color: #6d624d;
   line-height: 33px;
+  border-top: #f6f2d8 1px solid;
+  margin-top: 19px;
 }
 .ingredient-list ul {
-  margin-block-start: 0;
+  margin-block-start: 24px;
   margin-block-end: 0;
+}
+.ingredient-list div:first-of-type ul {
+  padding-inline-start: 70px;
+}
+.ingredient-list div:last-of-type ul {
+  padding-inline-start: 3px;
 }
 .ingredient-list li {
   list-style-type: none;
 }
-.ingredient-list::before {
-  
+.ingredient-list li::before {
+  content: ' ';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px #bfa787 solid;
+  border-radius: 3.5px;
+  margin-right: 10px;
 }
 
 /*
