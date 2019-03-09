@@ -123,6 +123,7 @@ main > div:nth-of-type(2) {
   letter-spacing: -1.0px;
   margin-block-start: 40px;
   margin-block-end: 0;
+  color: #2c2111;
 }
 
 .light {
@@ -136,7 +137,7 @@ main > div:nth-of-type(2) {
 }
 
 .recipe-text > * {
-  color: #232323;
+  color: #3f3019;
   font-family: 'noto serif', Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
   line-height: 1.5;
@@ -156,7 +157,21 @@ main > div:nth-of-type(2) {
   background-repeat: no-repeat;
   background-size: 960px;
   font-family: 'patrick hand', cursive;
-  font-size: 20px;
+  font-size: 25px;
+  letter-spacing: .30px;
+  height: 365px;
+  color: #3f3019;
+  line-height: 33px;
+}
+.ingredient-list ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.ingredient-list li {
+  list-style-type: none;
+}
+.ingredient-list::before {
+  
 }
 
 /*
