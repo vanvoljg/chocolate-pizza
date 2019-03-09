@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #232323;
+  color: #6d624d;
 }
 
 .grid-container {
@@ -131,7 +131,7 @@ main > div:nth-of-type(2) {
   font-family: 'oswald', Impact, sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #888;
+  color: #999999;
   letter-spacing: 1px;
   margin-block-start: 5px;
   margin-block-end: 0;
@@ -178,6 +178,7 @@ main > div:nth-of-type(2) {
 }
 .ingredient-list li {
   list-style-type: none;
+  position: relative;
 }
 .ingredient-list li::before {
   content: ' ';
@@ -187,6 +188,23 @@ main > div:nth-of-type(2) {
   border: 2px #bfa787 solid;
   border-radius: 3.5px;
   margin-right: 10px;
+}
+.ingredient-list li.checked-ingredient {
+  text-decoration: line-through;
+}
+.ingredient-list li.checked-ingredient::after {
+  content: '\2714';
+  color: #bfa787;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+
+
+footer {
+  color: #999999;
+  text-align: center;
 }
 
 /*
@@ -202,5 +220,20 @@ it all in the css. The running SVG is in assets/hr.svg.
   background-repeat: repeat;
   border: none;
   margin: 0 auto;
+}
+
+.logo-hr {
+  width: 960px;
+  height: 1px;
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(to right, #ccc 450px, #fff 460px, #fff 460px 500px, #ccc 510px);
+}
+.logo-hr::after {
+  content: url('./assets/small-logo.png');
+  display: inline-block;
+  position: relative;
+  top: -17px;
 }
 
