@@ -153,6 +153,10 @@ main > div:nth-of-type(2) {
 
 .ingredient-list {
   background-image: url(./assets/list-bg.png);
+  background-repeat: no-repeat;
+  background-size: 960px;
+  font-family: 'patrick hand', cursive;
+  font-size: 20px;
 }
 
 /*
