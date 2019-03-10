@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Oswald:300|Oswald:500|Patrick+Hand|Yellowtail');
+
+:root {
+  --noto: 'noto serif', Georgia, 'Times New Roman', Times, serif;
+  --oswald: 'oswald', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --patrick: 'patrick hand', cursive;
+  --yellowtail: 'yellowtail', cursive;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #6d624d;
+  font-family: var(--noto);
+}
+
+.grid-container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  width: 960px;
+  overflow: auto;
+  padding: 15px 0;
+}
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+}
+
+.col-1 {
+  width: 16.66%;
+}
+.col-2 {
+  width: 33.33%;
+}
+.col-3 {
+  width: 50%;
+}
+.col-4 {
+  width: 66.66%;
+}
+.col-5 {
+  width: 83.33%;
+}
+.col-6 {
+  width: 100%;
+}
+
+header .row {
+  padding-top: 20px;
+  padding-bottom: 32px;
+}
+
+header > div > div:first-child * {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+header > div > div:first-child img {
+  float: left;
+  margin-top: 20px;
+  height: 49px;
+
+}
+header > div > div:first-child h1 {
+  font-family: var(--yellowtail);
+  margin: 13px 0 0 50px;
+  font-size: 43px;
+  line-height: 1;
+  font-weight: normal;
+  color: #222222;
+}
+
+header > div > div:first-child .subtitle {
+  font-family: var(--oswald);
+  font-size: 12px;
+  margin: 0 0 0 55px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+}
+
+.social {
+  float: right;
+  margin-top: 31px;
+}
+
+.social img {
+  display: block;
+  float: left;
+  margin-left: 2px;
+  padding: 0;
+  width: 26px;
+}
+
+.social img:nth-last-child(2) {
+  margin-left: 10px;
+}
+
+main > div:first-of-type {
+  padding-bottom: 0;
+  overflow: hidden;
+}
+main > div:nth-of-type(2) {
+  padding-top: 0;
+}
+
+.hero {
+  width: 100%;
+}
+
+.right .light {
+  float: right;
+}
+
+.recipe-title {
+  font-family: var(--oswald);
+  font-size: 46px;
+  font-weight: 500;
+  letter-spacing: -1.0px;
+  margin-block-start: 40px;
+  margin-block-end: 0;
+  color: #222321;
+}
+
+.light {
+  font-family: var(--oswald);
+  font-size: 14px;
+  font-weight: 300;
+  color: #999999;
+  letter-spacing: 1px;
+  margin-block-start: 5px;
+  margin-block-end: 0;
+}
+
+.recipe-text > * {
+  color: #6d624d;
+  font-size: 18px;
+  line-height: 1.5;
+  text-indent: 30px;
+  letter-spacing: -.15px;
+  margin-block-end: 1.9em;
+}
+.recipe-text > *:first-child {
+  margin-block-start: 0;
+}
+.recipe-text > *:last-child {
+  margin-block-end: 0;
+}
+
+.ingredient-list {
+  background-image: url('./assets/list-bg.png');
+  background-repeat: no-repeat;
+  background-size: 960px;
+  font-family: var(--patrick);
+  font-size: 25px;
+  letter-spacing: .30px;
+  height: 365px;
+  color: #6d624d;
+  line-height: 33px;
+  border-top: #f6f2d8 1px solid;
+  margin-top: 19px;
+  position: relative;
+}
+.ingredient-list::after {
+  content: ' ';
+  border-right: #f6f2d8 1px solid;
+  height: 310px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.ingredient-list ul {
+  margin-block-start: 24px;
+  margin-block-end: 0;
+}
+.ingredient-list div:first-of-type ul {
+  padding-inline-start: 70px;
+}
+.ingredient-list div:last-of-type ul {
+  padding-inline-start: 3px;
+}
+.ingredient-list li {
+  list-style-type: none;
+  position: relative;
+  text-indent: -24px;
+  padding-left: 24px;
+}
+.ingredient-list li::before {
+  content: ' ';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px #bfa787 solid;
+  border-radius: 3.5px;
+  margin-right: 10px;
+}
+.ingredient-list li.checked-ingredient {
+  text-decoration: line-through;
+}
+.ingredient-list li.checked-ingredient::after {
+  content: '\2714';
+  color: #bfa787;
+  position: absolute;
+  left: 24px;
+  top: 0px;
+}
+.ingredient-list [class*='col-'] {
+  padding-right: 70px;
+}
+
+.about-author {
+  min-height: 213px;
+}
+.about-author img {
+  float: left;
+  width: 76px;
+  margin-top: 9px;
+  margin-right: 19px;
+  margin-bottom: 101px;
+}
+.about-author a {
+  float: right;
+  width: 198px;
+  height: 58px;
+  background-color: #d8613c;
+  line-height: 58px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-family: var(--oswald);
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin-top: 19px;
+  margin-left: 20px;
+}
+.about-author h4 {
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: .5px;
+  margin-block-start: 9px;
+  margin-block-end: 15px;
+}
+.about-author p {
+  font-size: 18px;
+  margin-block-start: 0;
+  line-height: 1.5;
+  margin-top: -5px;
+  letter-spacing: -.2px;
+}
+
+footer {
+  color: #999999;
+  text-align: center;
+}
+footer .row {
+  padding: 3em 0;
+  line-height: 1.5;
+}
+footer p {
+  font-size: 15px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/*
+The background image of the hatched horizontal line is base64 encoded SVG to keep
+it all in the css. The running SVG is in assets/hr.svg.
+*/
+
+.hatched-hr {
+  width: 960px;
+  height: 14px;
+  background-color: transparent;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjgiIGhlaWdodD0iOCI+CjxzdHlsZT4KbGluZSB7CiAgZmlsbDogIzk5OTsKICBzdHJva2U6ICM5OTk7CiAgc3Ryb2tlLWxpbmVjYXA6IHNxdWFyZTsKICBzdHJva2UtbGluZWpvaW46IG1pdGVyOwogIHN0cm9rZS13aWR0aDogMTsKfQo8L3N0eWxlPgo8ZGVmcz4KPHBhdHRlcm4gaWQ9ImRpYWdvbmFsZG93biIgY2xhc3M9ImhhdGNoIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiA+CiAgPGxpbmUgeDE9Ii04IiB5MT0iMCIgeDI9IjAiIHkyPSI4IiAvPgogIDxsaW5lIHgxPSItNCIgeTE9IjAiIHgyPSI0IiB5Mj0iOCIgLz4KICA8bGluZSB4MT0iMCIgeTE9IjAiIHgyPSI4IiB5Mj0iOCIgLz4KICA8bGluZSB4MT0iNCIgeTE9IjAiIHgyPSIxMiIgeTI9IjgiIC8+CiAgPGxpbmUgeDE9IjgiIHkxPSIwIiB4Mj0iMTYiIHkyPSI4IiAvPgo8L3BhdHRlcm4+CjwvZGVmcz4KPHJlY3QgaWQ9InJ1bGUiIHg9IjAiIHk9IjAiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHN0eWxlPSJmaWxsOiB1cmwoI2RpYWdvbmFsZG93bikiIC8+Cjwvc3ZnPgo=');
+  background-repeat: repeat;
+  border: none;
+  margin: 0 auto;
+}
+
+.logo-hr {
+  width: 960px;
+  height: 1px;
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(to right, #ddd 450px, #fff 460px, #fff 460px 500px, #ddd 510px);
+}
+.logo-hr::after {
+  content: url('./assets/small-logo.png');
+  display: inline-block;
+  position: relative;
+  top: -16px;
+  transform: scale(1.065);
+}
+
