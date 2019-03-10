@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif|Oswald:300|Oswald:500|Patrick+Hand|Yellowtail');
 
+:root {
+  --noto: 'noto serif', Georgia, 'Times New Roman', Times, serif;
+  --oswald: 'oswald', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --patrick: 'patrick hand', cursive;
+  --yellowtail: 'yellowtail', cursive;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -14,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   color: #6d624d;
+  font-family: var(--noto);
 }
 
 .grid-container {
@@ -27,7 +35,7 @@ body {
   padding: 15px 0;
 }
 
-[class*="col-"] {
+[class*='col-'] {
   float: left;
   min-height: 1px;
 }
@@ -68,7 +76,7 @@ header > div > div:first-child img {
 
 }
 header > div > div:first-child h1 {
-  font-family: 'yellowtail', cursive;
+  font-family: var(--yellowtail);
   margin: 13px 0 0 50px;
   font-size: 43px;
   line-height: 1;
@@ -77,7 +85,7 @@ header > div > div:first-child h1 {
 }
 
 header > div > div:first-child .subtitle {
-  font-family: 'oswald', sans-serif;
+  font-family: var(--oswald);
   font-size: 12px;
   margin: 0 0 0 55px;
   font-weight: 300;
@@ -118,7 +126,7 @@ main > div:nth-of-type(2) {
 }
 
 .recipe-title {
-  font-family: 'oswald', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: var(--oswald);
   font-size: 46px;
   font-weight: 500;
   letter-spacing: -1.0px;
@@ -128,7 +136,7 @@ main > div:nth-of-type(2) {
 }
 
 .light {
-  font-family: 'oswald', Impact, sans-serif;
+  font-family: var(--oswald);
   font-size: 14px;
   font-weight: 300;
   color: #999999;
@@ -139,7 +147,6 @@ main > div:nth-of-type(2) {
 
 .recipe-text > * {
   color: #6d624d;
-  font-family: 'noto serif', Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
   line-height: 1.5;
   text-indent: 30px;
@@ -154,10 +161,10 @@ main > div:nth-of-type(2) {
 }
 
 .ingredient-list {
-  background-image: url(./assets/list-bg.png);
+  background-image: url('./assets/list-bg.png');
   background-repeat: no-repeat;
   background-size: 960px;
-  font-family: 'patrick hand', cursive;
+  font-family: var(--patrick);
   font-size: 25px;
   letter-spacing: .30px;
   height: 365px;
@@ -165,6 +172,15 @@ main > div:nth-of-type(2) {
   line-height: 33px;
   border-top: #f6f2d8 1px solid;
   margin-top: 19px;
+  position: relative;
+}
+.ingredient-list::after {
+  content: ' ';
+  border-right: #f6f2d8 1px solid;
+  height: 310px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .ingredient-list ul {
   margin-block-start: 24px;
@@ -179,6 +195,8 @@ main > div:nth-of-type(2) {
 .ingredient-list li {
   list-style-type: none;
   position: relative;
+  text-indent: -24px;
+  padding-left: 24px;
 }
 .ingredient-list li::before {
   content: ' ';
@@ -196,11 +214,53 @@ main > div:nth-of-type(2) {
   content: '\2714';
   color: #bfa787;
   position: absolute;
-  left: 0px;
+  left: 24px;
   top: 0px;
 }
+.ingredient-list [class*='col-'] {
+  padding-right: 70px;
+}
 
-
+.about-author {
+  min-height: 213px;
+}
+.about-author img {
+  float: left;
+  width: 76px;
+  margin-top: 9px;
+  margin-right: 19px;
+  margin-bottom: 101px;
+}
+.about-author a {
+  float: right;
+  width: 198px;
+  height: 58px;
+  background-color: #d8613c;
+  line-height: 58px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-family: var(--oswald);
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin-top: 19px;
+  margin-left: 20px;
+}
+.about-author h4 {
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: .5px;
+  margin-block-start: 9px;
+  margin-block-end: 15px;
+}
+.about-author p {
+  font-size: 18px;
+  margin-block-start: 0;
+  line-height: 1.5;
+  margin-top: -5px;
+  letter-spacing: -.2px;
+}
 
 footer {
   color: #999999;
@@ -234,6 +294,7 @@ it all in the css. The running SVG is in assets/hr.svg.
   content: url('./assets/small-logo.png');
   display: inline-block;
   position: relative;
-  top: -17px;
+  top: -16px;
+  transform: scale(1.065);
 }
 
